@@ -1,4 +1,7 @@
 ## Login & Register UI
+![loginForm](https://github.com/user-attachments/assets/25506982-963a-48be-aefb-5b733d3c4f19)  ![registerForm](https://github.com/user-attachments/assets/a50308b2-70f1-4e98-a48c-1d9223756d17)
+
+
 
 This is just a UI project for Login & Register pages. doesn't include any backend logic.
 
