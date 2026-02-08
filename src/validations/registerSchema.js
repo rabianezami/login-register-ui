@@ -4,7 +4,8 @@ export const registerSchema = yup.object({
     fullName: yup 
     .string()
     .trim()
-    .required("Full name is required"),
+    .required("Full name is required")
+    .min(3, "Name must be at least 3 chracters"),
 
     email: yup
     .string()
@@ -16,11 +17,16 @@ export const registerSchema = yup.object({
     .string()
     .trim()
     .required()
-    .min(8, "Password must be at least 8 charachters."),
+    .min(8, "Password must be at least 8 charachters.")
+    .matches(/\d/, "Password must include at least one number" ),
 
     confirmPassword: yup
     .string()
     .trim()
     .required("Confirm password is required.")
-    .oneOf([yup.ref("password")], "Password don not match.")
+    .oneOf([yup.ref("password")], "Password don not match."),
+    
+    terms: yup
+    .boolean()
+    .oneOf([true], "You must accept the terms and conditions"),
 })
